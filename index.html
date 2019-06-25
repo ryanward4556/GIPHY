@@ -5,6 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="assets/css/style.css">
+
     <title>GIPHY</title>
 </head>
 
@@ -12,7 +14,13 @@
 
     <div id="topics-container"></div>
     <div id="gif-container"></div>
-    <div id="add-item-container"></div>
+    <form id="add-item-container">
+        <label for="topic-input">Add a Topic</label>
+        <input type="text" id="topic-input"><br>
+
+        <!-- Button triggers new movie to be added -->
+        <input id="add-topic" type="submit" value="Add a Topic">
+    </form>
 
 
 </body>
