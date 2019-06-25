@@ -16,7 +16,7 @@ var topics = ["ajax", "barcelona", "real madrid", "psg", "atletico", "man city",
 function displayTopicInfo() {
     //  Calls GIPHY api using queryURL
     var search = $(this).attr("data-search-item");
-    var queryURL = "http://api.giphy.com/v1/gifs/search?q=" + search + "&api_key=WBSORvGtsCMCwgWYyeKt6QjIwl0E7W8d";
+    var queryURL = "https://api.giphy.com/v1/gifs/search?q=" + search + "&api_key=WBSORvGtsCMCwgWYyeKt6QjIwl0E7W8d";
 
     $.ajax({
         url: queryURL,
