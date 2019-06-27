@@ -3,8 +3,22 @@ body {
      color: white;
 }
 
+.rating {
+    float: left;
+    text-align: center;
+}
+
+p {
+    padding: 3px;
+    float: left;
+    text-align: center;
+}
+
 img {
     margin: 4px;
+    padding: 10px;
+    clear: both;
+    
 }
 
 #gif-container {
@@ -18,3 +32,4 @@ img {
 .topic {
     margin: 3px;
 }
+

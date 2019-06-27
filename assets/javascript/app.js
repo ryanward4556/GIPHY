@@ -24,14 +24,19 @@ $(document).ready(function () {
             method: "GET"
         })
             .then(function (response) {
-                for (var i = 0; i < topics.length; i++) {
+                console.log(response);
+                for (var i = 0; i < 10; i++) {
                     var image = $("<img>");
-                    image.attr("src", response.data[i].images.fixed_height_still.url);
-                    image.attr("data-still", response.data[i].images.fixed_height.url);
-                    image.attr("data-animate", response.data[i].images.fixed_height_still.url);
+                    image.attr("src", response.data[i].images.original_still.url);
+                    image.attr("data-still", response.data[i].images.original_still.url);
+                    image.attr("data-animate", response.data[i].images.original.url);
                     image.attr("data-state", "still");
+                    var rating = $("<p>");
+                    rating.addClass("rating");
+                    rating.text("Rating: " + response.data[i].rating);
                     image.addClass("image");
-                    gifContainer.append(image);
+                    gifContainer.append(rating);
+                    rating.append(image);
                 }
             });
         gifContainer.empty();
@@ -83,7 +88,8 @@ $(document).ready(function () {
 
     renderButtons();
     $(document).on("click", ".topic", displayTopicInfo);
-    $(document).on("click", ".image", function () {
+    $(document).on("click", ".image", function (e) {
+        e.preventDefault();
         var state = $(this).attr("data-state");
         if (state === "still") {
             $(this).attr("src", $(this).data("animate"));
