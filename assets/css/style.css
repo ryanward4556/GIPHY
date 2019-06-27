@@ -29,7 +29,17 @@ img {
     float: right;
 }
 
+label {
+    background-color: #55a747;
+    width: 100%;
+    text-align: center;
+}
+
 .topic {
     margin: 3px;
+}
+
+#add-topic, #topic-input {
+    width: 100%;
 }
 
