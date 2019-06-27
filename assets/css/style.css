@@ -1,3 +1,20 @@
+body {
+     background-image: url("../images/ucl.jpg");
+     color: white;
+}
+
 img {
     margin: 4px;
+}
+
+#gif-container {
+    float: left;
+}
+
+#add-item-container {
+    float: right;
+}
+
+.topic {
+    margin: 3px;
 }
